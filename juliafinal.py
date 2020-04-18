@@ -50,34 +50,8 @@ def numberator(word: str) -> int:
         "x": 600,
         "y": 400,
         "z": 7,
-        "A": 1,
-        "B": 2,
-        "C": 500,
-        "D": 4,
-        "E": 5,
-        "F": 500,
-        "G": 3,
-        "H": 8,
-        "I": 10,
-        "J": 10,
-        "K": 20,
-        "L": 30,
-        "M": 40,
-        "N": 50,
-        "O": 70,
-        "P": 80,
-        "Q": 420,
-        "R": 100,
-        "S": 200,
-        "T": 300,
-        "U": 400,
-        "V": 400,
-        "W": 800,
-        "X": 600,
-        "Y": 400,
-        "Z": 7,
     }
-    return sum(letter_values.get(letter, 0) for letter in word)
+    return sum(letter_values.get(letter.lower(), 0) for letter in word)
 
 
 def draw_julia(name, a, b):
